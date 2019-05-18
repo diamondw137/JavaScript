@@ -1,4 +1,5 @@
 // from data.js
+var data = data 
 // D3 to select the tbody to add the table
 var tbody = d3.select("tbody");
 
@@ -39,20 +40,8 @@ submit.on("click", function() {
     console.log(datetime);
   
     // creation of filter
-    var filteredData = datetime.filter(datetime => datetime === inputValue);
+    var filteredData = data.filter(UFOSightings => data.datetime === inputValue);
 
     console.log(filteredData);
 })
-
-// YOUR CODE HERE!
-
-// adding city
-//   datetime: "1/28/1996",
-//     city: "dallas",
-//     state: "tx",
-//     country: "us",
-//     shape: "star",
-//     durationMinutes: "5 mins.",
-//     comments: "Cowboys win a superbowl, that's alien!."
-
 
