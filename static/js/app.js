@@ -22,6 +22,28 @@ var cell = row.append("td");
 cell.text(value);
     });
 });
+// create submit button
+
+var submit = d3.select("#submit");
+
+submit.on("click", function() {
+    // prevent page from refreshing
+    d3.event.preventDefault();
+
+    // input datetime
+    var inputElement = d3.select("#form-control");
+
+    // datetime value
+    var inputValue = inputElement.property("value");
+    console.log(inputValue);
+    console.log(datetime);
+  
+    // creation of filter
+    var filteredData = datetime.filter(datetime => datetime === inputValue);
+
+    console.log(filteredData);
+})
+
 // YOUR CODE HERE!
 
 // adding city
@@ -34,4 +56,3 @@ cell.text(value);
 //     comments: "Cowboys win a superbowl, that's alien!."
 
 
-// var Dallas = ["datetime", "1/"
