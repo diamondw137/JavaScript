@@ -21,7 +21,6 @@ cell.text(value);
 };
 
 buildtable();
-
 // create submit button
 var submit = d3.select("#filter-btn");
 submit.on("click", function() {
@@ -29,7 +28,7 @@ submit.on("click", function() {
     d3.event.preventDefault();
 
     // reset table
-    d3.select("tbody").html("")
+    d3.select("tbody").html("");
 
     // input datetime
     var inputElement = d3.select("#datetime");
@@ -40,12 +39,12 @@ submit.on("click", function() {
 
   
     // creation of filter
-    var filteredData = alienData.filter(alienData => 
+    var filteredData = alienData.filter(alienData=> 
         alienData.datetime === inputValue);
     console.log(filteredData);
 
 // loop through JSON of data
-data.forEach(function(UFOSightings){
+    filteredData.forEach(UFOSightings => {
     console.log(UFOSightings);
     var row = tbody.append("tr");
     Object.values(UFOSightings).forEach((value) => {
